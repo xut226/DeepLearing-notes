@@ -14,12 +14,12 @@
   * [2.5 ResNet](2-cnn-model/25-resnet.md)
 * [3 Objective Detection](3-objective-detection.md)
   * [3.1 Strategy](3-objective-detection/31-strategy.md)
-    * [3.1.1 Selective Search](3-objective-detection/31-strategy/311.md)
-    * 3.1.2 IOU
+    * [3.1.1 Selective Search](3-objective-detection/31-strategy/311-SelectiveSearch.md)
+    * [3.1.2 IOU](3-objective-detection/31-strategy/312-iou.md)
   * [3.2 RCNN](3-objective-detection/32-rcnn.md)
-  * [3.3 Fast RCNN](3-objective-detection/fast-rcnn.md)
+  * [3.3 Fast RCNN](3-objective-detection/33-fast-rcnn.md)
   * [3.4 Faster RCNN](3-objective-detection/34-faster-rcnn.md)
-  * 3.5 Mask RCNN
+  * 3.5 Mask RCNN 
   * [3.6 SSD](3-objective-detection/ssd.md)
   * [3.7 YOLOv1 v2 v3](3-objective-detection/37-yolov1-v2-v3.md)
 * [4 Segment](4-segment.md)
