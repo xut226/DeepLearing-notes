@@ -28,3 +28,63 @@ Fine tuning 阶段将IoU大于0.5的目标框圈定的图片作为正样本，�
 
 NMS  非最大值抑制
 
+算法流程：
+
+转载：[https://www.cnblogs.com/zf-blog/p/6740736.html](https://www.cnblogs.com/zf-blog/p/6740736.html)
+
+1 training
+
+a\) supervised pre-training
+
+| 样本 |
+| :--- |
+
+
+|  | 来源 |
+| :--- | :--- |
+| 正样本 | ILSVRC2012 |
+| 负样本 | ILSVRC2012 |
+
+ILSVRC样本集上仅有图像类别标签，没有图像物体位置标注；  
+采用AlexNet CNN网络进行有监督预训练，学习率=0.01；  
+该网络输入为227×227的ILSVRC训练集图像，输出最后一层为4096维特征-&gt;1000类的映射，训练的是网络参数。
+
+b\) Domain-specific fine-tuning
+
+特定样本下的微调
+
+| 样本 | 来源 |
+| :--- | :--- |
+| 正样本 | Ground Truth+与Ground Truth相交IoU&gt;0.5的建议框【由于Ground Truth太少了】 |
+| 负样本 | 与Ground Truth相交IoU≤0.5的建议框 |
+
+PASCAL VOC 2007样本集上既有图像中物体类别标签，也有图像中物体位置标签；  
+采用训练好的AlexNet CNN网络进行PASCAL VOC 2007样本集下的微调，学习率=0.001【0.01/10为了在学习新东西时不至于忘记之前的记忆】；  
+mini-batch为32个正样本和96个负样本【由于正样本太少】；  
+该网络输入为建议框【由selective search而来】变形后的227×227的图像，修改了原来的1000为类别输出，改为21维【20类+背景】输出，训练的是网络参数。
+
+3）Object category classifiers（SVM训练）
+
+| 样本 |
+| :--- |
+
+
+|  | 来源 |
+| :--- | :--- |
+| 正样本 | Ground Truth |
+| 负样本 | 与Ground Truth相交IoU＜0.3的建议框 |
+
+  
+由于SVM是二分类器，需要为每个类别训练单独的SVM；   
+SVM训练时输入正负样本在AlexNet CNN网络计算下的4096维特征，输出为该类的得分，训练的是SVM权重向量；   
+由于负样本太多，采用hard negative mining的方法在负样本中选取有代表性的负样本，该方法具体见。
+
+4）Bounding-box regression训练
+
+| 样本 | 来源 |
+| :--- | :--- |
+| 正样本 | 与Ground Truth相交IoU最大的Region Proposal，并且IoU&gt;0.6的Region Proposal |
+
+  
+输入数据为某类型样本对N个：{\(Pi,Gi\)}i=1⋯N以及Pii=1⋯N所对应的AlexNet CNN网络Pool5层特征ϕ5\(Pi\)i=1⋯N，输出回归后的建议框Bounding-box，训练的是dx\(P\)，dy\(P\)，dw\(P\)，dh\(P\)四种变换操作的权重向量。具体见前面分析。
+
