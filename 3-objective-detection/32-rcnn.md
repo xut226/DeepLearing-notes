@@ -74,9 +74,8 @@ mini-batch为32个正样本和96个负样本【由于正样本太少】；
 | 正样本 | Ground Truth |
 | 负样本 | 与Ground Truth相交IoU＜0.3的建议框 |
 
-  
-由于SVM是二分类器，需要为每个类别训练单独的SVM；   
-SVM训练时输入正负样本在AlexNet CNN网络计算下的4096维特征，输出为该类的得分，训练的是SVM权重向量；   
+由于SVM是二分类器，需要为每个类别训练单独的SVM；  
+SVM训练时输入正负样本在AlexNet CNN网络计算下的4096维特征，输出为该类的得分，训练的是SVM权重向量；  
 由于负样本太多，采用hard negative mining的方法在负样本中选取有代表性的负样本，该方法具体见。
 
 4）Bounding-box regression训练
@@ -85,6 +84,17 @@ SVM训练时输入正负样本在AlexNet CNN网络计算下的4096维特征，�
 | :--- | :--- |
 | 正样本 | 与Ground Truth相交IoU最大的Region Proposal，并且IoU&gt;0.6的Region Proposal |
 
-  
 输入数据为某类型样本对N个：{\(Pi,Gi\)}i=1⋯N以及Pii=1⋯N所对应的AlexNet CNN网络Pool5层特征ϕ5\(Pi\)i=1⋯N，输出回归后的建议框Bounding-box，训练的是dx\(P\)，dy\(P\)，dw\(P\)，dh\(P\)四种变换操作的权重向量。具体见前面分析。
+
+处理技巧：
+
+hard negatives：在训练的过程中，发现正样本的数量远远小于负样本，训练是将出现很多false negative。一种解决方法是：将正样本与差不多的负样本先加入训练，将训练出来的模型去预测未加入训练的负样本，被预测为正样本时判断为false negative。将其加入训练的负样本集，进行下一次训练。
+
+hard negative mining概念：
+
+难分样本挖掘。参考tensorflow objective detect 源码ssd build\__hard\_negative\_miner_
+
+CVPR2016 Training Region-based Object Detectors with Online Hard Example Mining\(oral\)，将hard negative mining 机制嵌入到SGD 中，fast-RCNN在训练的过程中根据你region proposal的损失自动选取合适的region proposal
+
+作为正负样本训练。
 
