@@ -1,5 +1,7 @@
 LinkNet是一个轻量级的图像分割网络，速度快
 
+![](/assets/LinkNet_overview.png)
+
 网络结构：
 
 ![](/assets/LinkNet.png)
