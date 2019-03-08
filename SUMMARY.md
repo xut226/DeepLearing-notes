@@ -32,4 +32,5 @@
   * [4.5 PSPNet](4-segment/45-pspnet.md)
   * [4.6 Large Kernel](4-segment/46-large-kernel.md)
   * [4.7 GCN](4-segment/47-gcn.md)
+  * [4.8 LinkNet](4-segment/48-linknet.md)
 
