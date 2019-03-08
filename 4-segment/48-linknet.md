@@ -10,5 +10,5 @@ LinkNet是一个轻量级的图像分割网络，速度快
 
 ![](/assets/LinkNet_decoder.png)
 
-
+LinkNet将编码块和解码块相连接。
 
