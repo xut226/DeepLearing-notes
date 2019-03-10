@@ -1,4 +1,5 @@
-# Mygitbook_DL
+# Mygitbook\_DL
+
 deep learning 笔记
 
 # Summary
@@ -33,4 +34,6 @@ deep learning 笔记
   * [4.5 PSPNet](4-segment/45-pspnet.md)
   * [4.6 Large Kernel](4-segment/46-large-kernel.md)
   * [4.7 GCN](4-segment/47-gcn.md)
+
+
 

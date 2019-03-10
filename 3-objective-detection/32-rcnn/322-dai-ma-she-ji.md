@@ -14,7 +14,7 @@
 
 selective search 产生多个框，多少个框根据设置的rect，size确定，与N个分类class生成label（n+1维）
 
-超参数：SGD，lr=0.001
+超参数：SGD，lr=2e-5,设置不合适loss不降。
 
 数据：batch\_size = 128，32个 positive sample\(覆盖所有class\) 和96个  negative sample
 
