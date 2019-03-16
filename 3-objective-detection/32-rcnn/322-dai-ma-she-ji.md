@@ -36,5 +36,7 @@ SVM训练微调
 
 输入图片用selective search 和wrap操作生成 region proposal数据
 
+导入微调模型，生成4096维特征数据
+
 
 
