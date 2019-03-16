@@ -34,5 +34,7 @@ SVM训练微调
 
 输入：待预测图片
 
-导入
+输入图片用selective search 和wrap操作生成 region proposal数据
+
+
 
