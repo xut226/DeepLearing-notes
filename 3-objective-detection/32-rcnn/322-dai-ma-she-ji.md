@@ -42,5 +42,5 @@ SVM训练微调
 
 导入回归模型，判断类别和bbo 的预测top排序，选择&gt;threshold的留做NMS
 
-
+输出：类别和bbox
 
