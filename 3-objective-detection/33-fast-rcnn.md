@@ -8,7 +8,7 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 
 2 fast RCNN 结构
 
-![](/assets/fast_RCNN_struct.png)
+![](/assets/Fast RCNN.png)
 
 3 训练过程
 
@@ -17,6 +17,7 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 * 经过5个卷积层+2个降采样层（分别跟在第一和第二个卷积层后面）
 
 * 进入ROIPooling层（其输入是conv5层的输出和region proposal，region proposal个数大约为2000个）
+
 * 再经过两个output都为4096维的全连接层
 * 分别经过output各为21和84维的全连接层（并列的，前者是分类输出，后者是回归输出）
 * 最后接上两个损失层（分类是softmax，回归是smoothL1）
