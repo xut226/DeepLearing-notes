@@ -16,6 +16,7 @@
   * [3.1 Strategy](3-objective-detection/31-strategy.md)
     * [3.1.1 Selective Search](3-objective-detection/31-strategy/311-SelectiveSearch.md)
     * [3.1.2 IOU](3-objective-detection/31-strategy/312-iou.md)
+    * [3.1.3 RPN](3-objective-detection/31-strategy/rpn.md)
   * [3.2 RCNN](3-objective-detection/32-rcnn.md)
     * [3.2.1 参考代码](3-objective-detection/32-rcnn/321-can-kao-dai-ma.md)
     * [3.2.2 代码设计](3-objective-detection/32-rcnn/322-dai-ma-she-ji.md)
