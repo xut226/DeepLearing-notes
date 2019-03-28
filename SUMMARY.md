@@ -25,6 +25,9 @@
   * 3.5 Mask RCNN 
   * [3.6 SSD](3-objective-detection/ssd.md)
   * [3.7 YOLOv1 v2 v3](3-objective-detection/37-yolov1-v2-v3.md)
+  * [3.8 traditional Method](3-objective-detection/38-traditional-method.md)
+    * [3.8.1 HOG + SVM](3-objective-detection/38-traditional-method/381-hog-+-svm.md)
+      * [3.8.1.1 HOG](3-objective-detection/38-traditional-method/381-hog-+-svm/3811-hog.md)
 * [4 Segment](4-segment.md)
   * [4.1 FCN](4-segment/41-fcn.md)
   * [4.2 U-Net](4-segment/u-net.md)
