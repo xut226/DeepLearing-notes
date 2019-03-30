@@ -19,8 +19,12 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 * 进入ROIPooling层（其输入是conv5层的输出和region proposal，region proposal个数大约为2000个）
 
 * 再经过两个output都为4096维的全连接层
+
 * 分别经过output各为21和84维的全连接层（并列的，前者是分类输出，后者是回归输出）
+
 * 最后接上两个损失层（分类是softmax，回归是smoothL1）
+
+ROIPooling:
 
 
 

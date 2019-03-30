@@ -14,8 +14,6 @@ SURF\( 加速稳健特征Speeded Up Robust Features\)
 
 1.1 HOG + SVM
 
-
-
 ## 2.基于深度学习的目标检测
 
 2.1基于区域的（two-stage）：
@@ -29,4 +27,10 @@ YOLO，SDD，Mask-RCNN
 2.3基于搜索的：
 
 基于视觉注意的AttentionNet，基于强化学习的算法
+
+
+
+### 参考
+
+https://blog.csdn.net/amusi1994/article/details/81042923
 
