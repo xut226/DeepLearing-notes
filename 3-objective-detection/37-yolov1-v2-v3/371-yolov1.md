@@ -12,7 +12,9 @@ you only look once
 
 * 网络设计
 
-包含24个卷积层和2个全连接层，如图8所示。对于卷积层，主要使用1x1卷积来做channle reduction，然后紧跟3x3卷积。对于卷积层和全连接层，采用Leaky ReLU激活函数：。但是最后一层却采用线性激活函数![](/assets/YOLO-Netpng)
+包含24个卷积层和2个全连接层，如图8所示。对于卷积层，主要使用1x1卷积来做channle reduction，然后紧跟3x3卷积。对于卷积层和全连接层，采用Leaky ReLU激活函数。但是最后一层却采用线性激活函数![](/assets/YOLO-Netpng)预测张量的解析：
+
+![](/assets/3.7.1 predict_tensor.png)
 
 * 
 
