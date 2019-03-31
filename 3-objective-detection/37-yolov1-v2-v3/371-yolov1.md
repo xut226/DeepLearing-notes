@@ -14,11 +14,19 @@ you only look once
 
 包含24个卷积层和2个全连接层，如图8所示。对于卷积层，主要使用1x1卷积来做channle reduction，然后紧跟3x3卷积。对于卷积层和全连接层，采用Leaky ReLU激活函数。但是最后一层却采用线性激活函数![](/assets/YOLO-Netpng)预测张量的解析：
 
-![](/assets/3.7.1 predict_tensor.png)训练：
+* ![](/assets/3.7.1 predict_tensor.png)训练：
 
 先在ImageNet上进行了预训练，其预训练的分类模型采用图8中前20个卷积层，然后添加一个average-pool层和全连接层。预训练之后，在预训练得到的20层卷积层之上加上随机初始化的4个卷积层和2个全连接层。由于检测任务一般需要更高清的图片，所以将网络的输入从224x224增加到了448x448
 
 ![](/assets/3.7.1 train_struct.png)
+
+* loss
+
+对不同的部分采用了不同的权重值。首先区分定位误差和分类误差。对于定位误差，即边界框坐标预测误差，采用较大的权重。![](/assets/3.7.1 loss.png)
+
+* 参考
+
+https://blog.csdn.net/m0\_37192554/article/details/81092514\#滑动窗口与cnn
 
 * 
 
