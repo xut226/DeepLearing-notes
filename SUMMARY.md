@@ -1,11 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
-* [1 Conception](chapter1.md)
-  * [1.1 conv](chapter1/11-conv.md)
-  * [1.2 Pooling](chapter1/12-pooling.md)
-  * [1.3 FC](chapter1/13-fc.md)
-  * [1.4  activation](chapter1/14-activation.md)
+* [1 Conception](1-Conception.md)
+  * [1.1 conv](1-Conception/11-conv.md)
+  * [1.2 Pooling](1-Conception/12-pooling.md)
+  * [1.3 FC](1-Conception/13-fc.md)
+  * [1.4  activation](1-Conception/14-activation.md)
 * [2 CNN model](2-cnn-model.md)
   * [2.1 LeNet](2-cnn-model/21-lenet.md)
   * [2.2 AlexNet](2-cnn-model/22-alexnet.md)
