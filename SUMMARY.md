@@ -37,6 +37,7 @@
       * [3.8.2.2 Latent SVM](3-objective-detection/38-traditional-method/382-dpm-+-latent-svm/3822.md)
     * [3.8.3 Haar + Adaboost](3-objective-detection/38-traditional-method/383-harr-+-adaboost.md)
   * [3.9 traditional Track](3-objective-detection/39-traditional-track.md)
+    * [3.9.1 meanShift](3-objective-detection/39-traditional-track/391-meanshift.md)
 * [4 Segment](4-segment.md)
   * [4.1 FCN](4-segment/41-fcn.md)
   * [4.2 U-Net](4-segment/u-net.md)
