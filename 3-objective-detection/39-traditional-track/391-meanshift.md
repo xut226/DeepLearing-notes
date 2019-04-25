@@ -2,7 +2,7 @@
 
 基本形式：
     给定d维空间n个数据点X，对于空间中任意的点X的mean shift向量基本形式可以表示为：
-        $$ M_k\sum_{x_i\inS_k(x_i-x)}$$
+        $$ M_k\sum_{x_i\inS_k}(x_i-x)$$
 
 
 
