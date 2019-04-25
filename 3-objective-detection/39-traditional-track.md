@@ -1,8 +1,12 @@
 传统的目标跟踪
 
-1.meanshift + SVM
+1.meanshift 
 
-2.Camshift + SVM
+2.Camshift
 
-3.Kalman +
+3.Kalman + meanshift
+
+4.Kalman + Camshift
+
+
 
