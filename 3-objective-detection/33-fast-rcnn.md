@@ -26,5 +26,11 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 
 ROIPooling层:
 
+由于 region proposal的尺度各不相同，而期望提取出来的特征向量维度相同，ROIPooling解决这个问题
 
+将region proposal划分为H \* W大小的网格
+
+对每个网格做MaxPooling（即每个网格对应一个输出）
+
+将所有输出值组合起来形成固定大小为H\*W的feature map
 
