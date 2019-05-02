@@ -39,3 +39,7 @@
 
 ![](/assets/3.3.2_section_maxpooling.png)
 
+reference：
+
+[https://blog.csdn.net/auto1993/article/details/78514071](https://blog.csdn.net/auto1993/article/details/78514071)
+
