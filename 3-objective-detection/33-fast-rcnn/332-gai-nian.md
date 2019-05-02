@@ -8,3 +8,18 @@
 
 
 
+#### 输入
+
+* 从具有多个卷积核池化的深度网络中获得的固定大小的feature maps；
+* 一个表示所有ROI的N\*5的矩阵，其中N表示ROI或者说是region proposal的数目。第一列表示图像index，其余四列表示其余的左上角和右下角坐标。
+
+#### 操作步骤
+
+（1）根据输入image，将ROI映射到feature map对应位置；
+
+（2）将映射后的区域划分为相同大小的sections（sections数量与输出的维度相同）；
+
+（3）对每个sections进行max pooling操作；
+
+
+
