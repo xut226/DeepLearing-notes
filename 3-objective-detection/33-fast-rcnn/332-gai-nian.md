@@ -19,3 +19,7 @@
 
 （3）对每个sections进行max pooling操作；
 
+#### 例子
+
+
+
