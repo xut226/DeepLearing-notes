@@ -4,3 +4,5 @@
 
 考虑到感兴趣区域（RoI）尺寸不一，但是输入图中后面FC层的大小是一个统一的固定值，因为ROI池化层的作用类似于SPP-net中的SPP层，即将不同尺寸的RoI feature map池化成一个固定大小的feature map。具体操作：假设经过RoI池化后的固定大小为是一个超参数，因为输入的RoI feature map大小不一样，假设为，需要对这个feature map进行池化来减小尺寸，那么可以计算出池化窗口的尺寸为：，即用这个计算出的窗口对RoI feature map做max pooling，Pooling对每一个feature map通道都是独立的。
 
+其次RoI有四个参数![](https://private.codecogs.com/gif.latex?%5Cleft%20%28%20r%20%2Cc%2Ch%2Cw%20%5Cright%20%29 "\left \( r ,c,h,w \right \)")除了尺寸参数![](https://private.codecogs.com/gif.latex?h%25u3001w "h、w")、![](https://private.codecogs.com/gif.latex?w "w")外，还有两个位置参数![](https://private.codecogs.com/gif.latex?r "r")、![](https://private.codecogs.com/gif.latex?c "c")表示RoI的左上角在整个图片中的坐标
+
