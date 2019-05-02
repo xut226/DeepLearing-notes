@@ -13,7 +13,7 @@
 
 #### 操作步骤
 
-（1）根据输入image，将ROI映射到feature map对应位置，如image的width和height为\(W,H\)，ROI（x0,y0,w0,h0\)映射到image的feature map（固定的大小）上为（x0/W,y0/H,w0/W,h0/H\)；
+（1）根据输入image，将ROI映射到feature map对应位置，如image的width和height为\(W,H\)，ROI（x0,y0,w0,h0\)映射到image的feature map（固定的大小）上的区域为（x0/W,y0/H,w0/W,h0/H\)；
 
 （2）将映射后的区域划分为相同大小的sections（sections数量与输出的维度相同）；
 
