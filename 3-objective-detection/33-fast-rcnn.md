@@ -14,7 +14,7 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 
 * 输入是224×224的固定大小图片
 
-* 经过5个卷积层+2个降采样层（分别跟在第一和第二个卷积层后面）
+* 输入图片经过5个卷积层+2个降采样层（分别跟在第一和第二个卷积层后面）
 
 * 进入ROIPooling层（其输入是conv5层的输出和region proposal，region proposal个数大约为2000个）
 
@@ -24,7 +24,7 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 
 * 最后接上两个损失层（分类是softmax，回归是smoothL1）
 
-ROIPooling:
+ROIPooling层:
 
 
 
