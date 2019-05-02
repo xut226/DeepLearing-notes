@@ -21,5 +21,21 @@
 
 #### 例子
 
+考虑一个8\*8大小的feature map，一个ROI，以及输出大小为2\*2.
 
+（1）输入的固定大小的feature map
+
+![](/assets/3.3.2 feature map.png)
+
+（2）region proposal 投影之后位置（左上角，右下角坐标）：（0，3），（7，8）。
+
+![](/assets/3.3.2 roi_featuremap.png)
+
+（3）将其划分为（2\*2）个sections（因为输出大小为2\*2），我们可以得到：
+
+![](/assets/3.3.2_featuremap sections.png)
+
+（4）对每个section做max pooling，可以得到：
+
+![](/assets/3.3.2_section_maxpooling.png)
 
