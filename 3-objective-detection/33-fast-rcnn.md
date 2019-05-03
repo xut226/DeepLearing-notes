@@ -10,6 +10,8 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 
 fast RCNN同样采用Selective Search 生成region proposal，但是不直接送入CNN，整张图片送入CNN经过卷积操作之后生成feature map，feature map 与region proposal一起送入ROI层，ROI层生成固定的输出尺寸。输出分类采用softmax，框回归采用smoothL1，两个任务统一起来形成多任务损失训练。
 
+相比RCNN，fast RCNN不再将每个region proposal送入CNN训练，大大减少了网络开销。
+
 3 fast RCNN 结构
 
 ![](/assets/Fast RCNN.png)
