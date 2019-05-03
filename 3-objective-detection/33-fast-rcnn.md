@@ -6,11 +6,15 @@ b\) 时间和空间开销大（在训练SVM和回归的时候需要用网络训�
 
 c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重复操作太多
 
-2 fast RCNN 结构
+2 fast RCNN
+
+
+
+3 fast RCNN 结构
 
 ![](/assets/Fast RCNN.png)
 
-3 训练过程
+4 训练过程
 
 * 输入是224×224的固定大小图片
 
