@@ -28,6 +28,7 @@
   * [3.4 Faster RCNN](3-objective-detection/34-faster-rcnn.md)
     * [3.4.1 struct](3-objective-detection/34-faster-rcnn/341-struct.md)
     * [3.4.2 RPN](3-objective-detection/34-faster-rcnn/342-rpn.md)
+    * [3.4.3 training/test](3-objective-detection/34-faster-rcnn/343.md)
   * 3.5 Mask RCNN 
   * [3.6 SSD](3-objective-detection/ssd.md)
   * [3.7 YOLOv1 v2 v3](3-objective-detection/37-yolov1-v2-v3.md)
