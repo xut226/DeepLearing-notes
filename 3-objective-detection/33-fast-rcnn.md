@@ -8,11 +8,11 @@ c\) 测试比较慢（每张图片的每个region proposal都要做卷积，重�
 
 2 fast RCNN
 
-
+fast RCNN同样采用Selective Search 生成region proposal，但是不直接送入CNN，整张图片送入CNN经过卷积操作之后生成
 
 3 fast RCNN 结构
 
-![](/assets/Fast RCNN.png)
+![](/assets/Fast RCNN.png)　
 
 4 训练过程
 
